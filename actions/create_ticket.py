@@ -5,7 +5,7 @@ zendesk = Zendesk('https://woophelp.zendesk.com', 'remimorin@gmail.com', 'potato
 
 class createTicket(Action):
 
-    def create_ticket(self,title,description):
+    def create_ticket(self,ticket_title,ticket_description):
                 # Create
         new_ticket = {
             'ticket': {

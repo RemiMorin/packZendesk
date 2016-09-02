@@ -5,11 +5,11 @@ description: Create a new ticket in zendesk
 enabled: true
 entry_point: create_ticket.py
 parameters:
-  comment_text:
+  ticket_title:
     type: string
     description: ticket description
     required: true
-  issue_key:
+  ticket_description:
     type: string
     description: ticket content
     required: true
