@@ -1,0 +1,9 @@
+.idea/
+*.pyc
+*/report.xml
+coverage.xml
+.cache/
+.coverage
+.doit.db
+conf/virtual_env.conf
+dist/
