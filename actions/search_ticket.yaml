@@ -1,0 +1,15 @@
+---
+name: search_ticket
+runner_type: run-python
+description: Search for a ticket in zendesk
+enabled: true
+entry_point: search_ticket.py
+parameters:
+  ticket_title:
+    type: string
+    description: ticket description
+    required: true
+  ticket_description:
+    type: string
+    description: ticket content
+    required: true
