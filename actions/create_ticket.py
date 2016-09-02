@@ -5,7 +5,7 @@ zendesk = Zendesk('https://woophelp.zendesk.com', 'remimorin@gmail.com', 'potato
 
 class createTicket(Action):
 
-    def create_ticket(self,ticket_title,ticket_description):
+    def run(self,ticket_title,ticket_description):
                 # Create
         new_ticket = {
             'ticket': {
@@ -33,5 +33,4 @@ class createTicket(Action):
 
         # Need ticket ID?
         ticket_id = get_id_from_url(result)
-        print ticket_id
-        pass
+        return ticket_id
