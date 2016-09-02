@@ -1,4 +1,4 @@
-from actions.lib.base import Action
+from lib.base import Action
 
 from zdesk import Zendesk, get_id_from_url
 zendesk = Zendesk('https://woophelp.zendesk.com', 'remimorin@gmail.com', 'potatoes12')
@@ -13,8 +13,8 @@ class createTicket(Action):
                     'name': 'Woop Woop',
                     'email': 'woop@mailionator.com',
                 },
-                'subject':title,
-                'description': description,
+                'subject':ticket_title,
+                'description': ticket_description,
                 'tags': ['problem', 'setup'],
                 'ticket_field_entries': [
                     {
