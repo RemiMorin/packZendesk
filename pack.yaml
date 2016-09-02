@@ -1,5 +1,5 @@
 ---
-name : zendesk
+name : packZendesk
 description : st2 content pack containing zendesk integration
 keywords:
   - zendesk
