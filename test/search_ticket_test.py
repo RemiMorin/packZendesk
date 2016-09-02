@@ -1,14 +1,20 @@
-import unittest
+import unittest2
 
 from actions.search_ticket import searchTicket
 from actions.lib.base import Action
+import yaml
 
-class testCreateTicket(unittest.TestCase):
+class testCreateTicket(unittest2.TestCase):
 
     def test_search_ticket(self):
-        test = searchTicket(Action({}));
-        result = test.run(search_string="woop")
+        action = searchTicket(readConfig('../config.yaml'))
+        result = action.run(search_string="woop")
         print result
+        self.assertTrue(result != None,"result should be defined")
+        result = action.run(search_string="status:open")
+        print result
+        self.assertTrue(result != None,"result should be defined")
 
-        result = test.run(search_string="status:open")
-        print result
+def readConfig(filename):
+    with open(filename, 'r') as stream:
+       return yaml.load(stream)
