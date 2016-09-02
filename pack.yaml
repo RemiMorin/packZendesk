@@ -1,0 +1,8 @@
+---
+name : zendesk
+description : st2 content pack containing zendesk integration
+keywords:
+  - zendesk
+version : 0.0
+author : ingeno
+email : remimorin@gmail.com
