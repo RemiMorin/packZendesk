@@ -1,15 +1,14 @@
 from lib.base import Action
 
-
 class createTicket(Action):
 
-    def run(self,ticket_title,ticket_description):
+    def run(self,ticket_title,ticket_description, userName, userEmail):
                 # Create
         new_ticket = {
             'ticket': {
                 'requester': {
-                    'name': 'Woop Woop',
-                    'email': 'woop@mailionator.com',
+                    'name': userName,
+                    'email': userEmail,
                 },
                 'subject':ticket_title,
                 'description': ticket_description,

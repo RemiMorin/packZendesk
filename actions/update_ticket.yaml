@@ -1,0 +1,15 @@
+---
+name: update_ticket
+runner_type: run-python
+description: Create a new ticket in zendesk
+enabled: true
+entry_point: update_ticket.py
+parameters:
+  ticket_id:
+    type: number
+    description: ticket description
+    required: true
+  comment:
+    type: string
+    description: ticket content
+    required: true

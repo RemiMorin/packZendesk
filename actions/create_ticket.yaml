@@ -13,3 +13,11 @@ parameters:
     type: string
     description: ticket content
     required: true
+  userName:
+    type: string
+    description: name of person reporting defect
+    required: true
+  userEmail:
+    type: string
+    description: email of person reporting ticket
+    required: true
