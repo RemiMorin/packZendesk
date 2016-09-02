@@ -60,7 +60,7 @@ if $INSTALL_VIRTUAL_ENV; then
     echo " "
     source $VIRTUAL_ENV_PATH/$VIRTUAL_ENV_NAME/bin/activate
     pip install pip --upgrade
-    grep -v $VIRTUAL_ENV_NAME== requirements.txt | pip install -r /dev/stdin
+    grep -v $VIRTUAL_ENV_NAME== requirements.txt | pip install -r /dev/stdin -r tests.req
 
     echo " "
     echo "----------------------------------------"
