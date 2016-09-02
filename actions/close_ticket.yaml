@@ -1,0 +1,11 @@
+---
+name: search_ticket
+runner_type: run-python
+description: Close  a ticket in zendesk
+enabled: true
+entry_point: close_ticket.py
+parameters:
+  ticket_id:
+    type: string
+    description: ticket id
+    required: true

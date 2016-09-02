@@ -5,11 +5,7 @@ description: Search for a ticket in zendesk
 enabled: true
 entry_point: search_ticket.py
 parameters:
-  ticket_title:
+  search_string:
     type: string
-    description: ticket description
-    required: true
-  ticket_description:
-    type: string
-    description: ticket content
+    description: zendesk api search string
     required: true
