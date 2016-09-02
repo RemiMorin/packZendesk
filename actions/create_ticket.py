@@ -1,7 +1,5 @@
 from lib.base import Action
 
-from zdesk import Zendesk, get_id_from_url
-zendesk = Zendesk('https://woophelp.zendesk.com', 'remimorin@gmail.com', 'potatoes12')
 
 class createTicket(Action):
 
@@ -29,8 +27,4 @@ class createTicket(Action):
             }
         }
         # Create the ticket and get its URL
-        result = zendesk.ticket_create(data=new_ticket)
-
-        # Need ticket ID?
-        ticket_id = get_id_from_url(result)
-        return ticket_id
+        return self.zendesk.ticket_create(data=new_ticket)
