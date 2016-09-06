@@ -1,0 +1,30 @@
+install pack
+st2 run packs.install packs=packZendesk repo_url=https://github.com/RemiMorin/packZendesk.git
+
+register aliases
+st2ctl reload --register-aliases
+
+config slack
+edit /opt/stackstorm/chatops/st2chatops.env
+
+restart chatops
+sudo service st2chatops restart
+
+Chatops example slack
+
+!zendesk create ticket title mon ticket description ma description username alex email allo@gmail.com
+
+!zendesk update ticket XXX comment comment
+
+!zendesk search ticket mon ticket
+
+!zendesk close ticket number XXX
+
+
+st2 run packZendesk.close_ticket ticket_id=XXX
+
+st2 run packZendesk.create_ticket ticket_title=XXX ticket_description=XXX userName=XXX userEmail=XXX
+
+st2 run packZendesk.update_ticket ticket_id=XXX comment=XXX
+
+st2 run packZendesk.close_ticket ticket_id=XXX
