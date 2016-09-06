@@ -1,0 +1,6 @@
+name: "search_ticket"
+pack: "packZendesk"
+description: "search a zendesk ticket."
+action_ref: "packZendesk.search_ticket"
+formats:
+    - "zendesk search ticket {{search_string}}"

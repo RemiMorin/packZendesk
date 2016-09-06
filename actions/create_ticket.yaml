@@ -7,7 +7,7 @@ entry_point: create_ticket.py
 parameters:
   ticket_title:
     type: string
-    description: ticket description
+    description: ticket title
     required: true
   ticket_description:
     type: string

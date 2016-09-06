@@ -1,0 +1,6 @@
+name: "update_ticket"
+pack: "packZendesk"
+description: "update a zendesk ticket."
+action_ref: "packZendesk.update_ticket"
+formats:
+    - "zendesk update ticket {{ticket_id}} comment {{comment}}"

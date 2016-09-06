@@ -1,0 +1,6 @@
+name: "create_ticket"
+pack: "packZendesk"
+description: "create a zendesk ticket."
+action_ref: "packZendesk.create_ticket"
+formats:
+    - "zendesk create ticket title {{ticket_title}} description {{ticket_description}} username {{userName}} email {{userEmail}}"
