@@ -1,5 +1,5 @@
 ---
-name: search_ticket
+name: close_ticket
 runner_type: run-python
 description: Close  a ticket in zendesk
 enabled: true
