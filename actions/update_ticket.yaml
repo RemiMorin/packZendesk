@@ -1,7 +1,7 @@
 ---
 name: update_ticket
 runner_type: run-python
-description: update a ticket in zendesk
+description: Update a ticket in zendesk
 enabled: true
 entry_point: update_ticket.py
 parameters:
