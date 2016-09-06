@@ -6,7 +6,7 @@ enabled: true
 entry_point: update_ticket.py
 parameters:
   ticket_id:
-    type: number
+    type: string
     description: ticket description
     required: true
   comment:
