@@ -45,11 +45,13 @@ st2 run packs.install packs=packZendesk repo_url=https://github.com/RemiMorin/pa
 
 ##Configuration
 edit the file /opt/stackstorm/packs/packZendesk/config.yaml to set the proper zendesk credentials.
-###config.yaml
-  url: "https://XXX.zendesk.com"
-  user: "XXX"
-  password: "XXX"
+###config.yaml template
 
+    ```
+    url: "https://XXX.zendesk.com"
+    user: "XXX"
+    password: "XXX"
+    ```
 
 ##Setup dev environnement:
 
