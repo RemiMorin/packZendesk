@@ -1,20 +1,28 @@
 import unittest2
+from config import config
+
 from actions.update_ticket import updateTicket
-import yaml
+from actions.create_ticket import createTicket
+from zdesk import get_id_from_url
+
+
 
 
 class testCreateTicket(unittest2.TestCase):
 
     def test_create_ticket(self):
 
-        action = updateTicket(readConfig('../config.yaml'))
-        result = action.run(7,
+        result = createTicket(config).run("Example from test",
+                            "this ticked was generated automatically from unit test",
+                            "Youpi",
+                            "woop@mailinator.com")
+        id = get_id_from_url(result)
+        action = updateTicket(config)
+        result = action.run(id,
                             "Comment generated from unit test")
         print result
         self.assertTrue(result != None,"result should be defined")
         #self.assertTrue(result['ticket']['updated_at'] ... validate updated time)
 
 
-def readConfig(filename):
-    with open(filename, 'r') as stream:
-        return yaml.load(stream)
+
