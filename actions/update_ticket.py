@@ -14,3 +14,4 @@ class updateTicket(Action):
         }
         # Create the ticket and get its URL
         return self.zendesk.ticket_update(ticket_id,data=data)
+        return 42
