@@ -1,0 +1,6 @@
+name: "close_ticket"
+pack: "packZendesk"
+description: "close a zendesk ticket."
+action_ref: "zendesk.close_ticket"
+formats:
+    - "zendesk close ticket number {{ticket_id}}"
